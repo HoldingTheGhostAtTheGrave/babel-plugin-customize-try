@@ -1,0 +1,14 @@
+{
+  "name": "babel-plugin-customize-try",
+  "version": "1.1.2",
+  "description": "自定义 Try Catch ",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["自定义Try"],
+  "author": "",
+  "repository":"",
+  "license": "MIT"
+}
+
