@@ -2,7 +2,7 @@ const template = require('@babel/template').default;
 
 
 function getAnnotationName ( path ) {
-	let note = '';
+	let note = null;
 	const { node:{ type , leadingComments } , parentPath:{ parent } } = path;
 	switch (type) {
 		case "ObjectMethod":
@@ -20,7 +20,7 @@ function getAnnotationName ( path ) {
 		default:
 			break;
 	}
-	return note ;
+	return note ?? [];
 }
 
 const processingFunction = (path, t , { catchs }) => {
@@ -48,7 +48,7 @@ const processingFunction = (path, t , { catchs }) => {
 		let tryStatement = t.tryStatement(body, catchClause);
 		// 生成 ast 函数
 		if(type == 'ObjectMethod'){
-			func = t[type] ( kind, key, params, t.BlockStatement([tryStatement]), computed );
+			func = t[type] ( kind, key, params, t.BlockStatement([tryStatement]), computed  ,generator, async);
 		}else{
 			func = t[type]( id , params, t.BlockStatement([tryStatement]), generator, async);
 		}

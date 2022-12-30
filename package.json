@@ -1,13 +1,13 @@
 {
   "name": "babel-plugin-customize-try",
-  "version": "1.1.2",
+  "version": "1.1.6",
   "description": "自定义 Try Catch ",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["自定义Try"],
-  "author": "",
+  "keywords": ["自动添加 Try"],
+  "author": { "name": "loveghosts", "email": "2832491856@qq.com", "url": "https://github.com/HoldingTheGhostAtTheGrave/babel-plugin-customize-try.git" },
   "repository":"",
   "license": "MIT"
 }
